@@ -26,7 +26,7 @@
               :stroke="innerStrokeColor"
               :stroke-dasharray="circumference"
               stroke-dashoffset="0"
-              stroke-linecap="round"
+              :stroke-linecap="strokeLinecap"
               :style="strokeStyle"></circle>
       <circle :transform="'rotate(270, ' + radius + ',' + radius + ')'"
               :r="innerCircleRadius"
@@ -94,6 +94,11 @@ export default {
       type: String,
       required: false,
       default: 'linear'
+    },
+    strokeLinecap: {
+      type: String,
+      required: false,
+      default: 'round'
     }
   },
 
